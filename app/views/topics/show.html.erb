@@ -1,0 +1,10 @@
+<h1>topic</h1>
+<p><%= @topic.description %></p>
+<br>
+<% @topic.answers.each do |answer|  %>
+<ul>
+  <li> <%= answer.description %> by <%= answer.user%></li>
+</ul>
+  <% end %>
+
+<%= link_to "new answer", new_topic_answer_path(@topic) %>

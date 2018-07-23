@@ -11,6 +11,12 @@ roxana = User.new(email: 'roxy@gmail.com', password: '123456')
 roxana.save
 alex = User.new(email: 'alex@gmail.com', password: '123456')
 alex.save
+adrien = User.new(email: 'adrien@gmail.com', password: '123456')
+adrien.save
+benj = User.new(email: 'benj@gmail.com', password: '123456')
+benj.save
+gelly = User.new(email: 'gelly@gmail.com', password: '123456')
+gelly.save
 
 puts "user created"
 
@@ -27,4 +33,12 @@ Answer.destroy_all
 
 answer = Answer.new(description: 'www.zara.com', user_id: alex.id, topic_id: robe.id)
 answer.save
-puts "answer created"
+
+answer_gerald = Answer.new(description: 'www.hm.com', user_id: gelly.id, topic_id: robe.id)
+answer_gerald.save
+
+answer_adrien = Answer.new(description: 'www.leboncoin.com', user_id: adrien.id, topic_id: robe.id)
+answer_adrien.save
+
+
+puts "answers created"

@@ -1,0 +1,15 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% @topics.each do |topic| %>
+<p>
+  <%= topic.description %>
+<%= link_to "show", topic_path(topic) %>
+</p>
+<% end %>
+
+
+<br>
+<p> <%= link_to "add a topic", new_topic_path %> </p>
+
+
