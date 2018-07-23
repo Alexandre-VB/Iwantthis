@@ -24,6 +24,8 @@ Topic.destroy_all
 
 
 robe = Topic.new(description: 'looking this kind of dress', user_id: roxana.id)
+url = "http://static1.puretrend.com/articles/5/72/58/5/@/817969-le-top-look-de-rue-petite-robe-580x0-3.jpg"
+robe.remote_photo_url = url
 robe.save
 
 puts "topic created"

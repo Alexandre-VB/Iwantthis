@@ -1,5 +1,6 @@
 <h1>topic</h1>
-<p><%= @topic.description %></p>
+<p><%= @topic.description %> <%= cl_image_tag @topic.photo, height: 300, width: 400, crop: :fill %>
+</p>
 <br>
 <% @topic.answers.each do |answer|  %>
 <ul>
