@@ -8,10 +8,10 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(anwsers_params)
+    @topic = Topic.find(params[:topic_id])
+    @answer = Answer.new(answers_params)
     @answer.topic = @topic
-    @anwser.user = current_user
-    # authorize @console
+    @answer.user = current_user
     if @answer.save
       redirect_to root_path
     else
@@ -37,7 +37,7 @@ class AnswersController < ApplicationController
   private
 
   def answers_params
-    params.require(:anwser).permit(:description)
+    params.require(:answer).permit(:description)
   end
 
 

@@ -1,6 +1,6 @@
 
-
-<%= simple_form_for [@answer, @topic] do |f| %>
+<%= simple_form_for [@topic, @answer] do |f| %>
   <%= f.input :description %>
-  <%= f.submit "add a review", class: "btn btn-primary" %>
+  <%= f.submit "add an answer", class: "btn btn-primary" %>
 <% end %>
+
